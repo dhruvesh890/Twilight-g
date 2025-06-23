@@ -20,9 +20,9 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     # Load token from environment variable
-    TOKEN = os.getenv("BOT_TOKEN")
+    TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
     if not TOKEN:
-        raise ValueError("❌ BOT_TOKEN not set in environment variables")
+        raise ValueError("❌ TELEGRAM_BOT_TOKEN not set in environment variables")
 
     # Create the bot application
     app = ApplicationBuilder().token(TOKEN).build()
